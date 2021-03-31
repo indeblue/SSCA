@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="icon" href="star.png" type="image/gif" sizes="16x16">
+    <title>SSCA
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+</head>
+
+<body background="dotted.svg">
+    <div id="loader"></div>
+    <div id="content">
+        <nav class="navbar">
+            <div class="navbox">
+                <div class="logo">
+                    <a href="#"><img src="star.png" alt="">Star Sports Coaching Academy</a>
+                </div>
+
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="achievement.html">Achievements</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="about-section">
+            <b><h1>About Us</h1></b>
+            <img src="doubleInvertedComma.png" style="width:3%">
+            <p>We are Cricket Lovers and want everyone to enjoy this game and love this game even more.</p>
+
+        </div>
+
+        <h2 style="text-align:center">Our Team</h2>
+
+        <div class="column">
+            <div class="card">
+                <img src="akshay.jpg" alt="Akshay" style="width:30%">
+                <div class="container">
+                    <h2>Akshay Soni</h2>
+                    <p class="title">Details</p>
+                    <p>ID:201852001</p>
+                    <p>Akshay Soni</p>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gallery</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Grounds</a></li>
+                        <li><a href="#">Eqips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Locations</h3>
+                    <ul>
+                        <li><a href="#">Ashok Nagar</a></li>
+                        <li><a href="#">Bhagat Nagar</a></li>
+                        <li>
+                            <a href="#">Chetan Vihar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Join us</h3>
+                    <ul>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Mentor</a></li>
+                        <li><a href="#">Coach</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section form">
+                    <h3>Drop a Message</h3>
+                    <p>We will reply you very soon!</p>
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Send Message</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; Akshay Soni
+            </div>
+        </footer>
+    </div>>
+</body>
+<script>
+    var loader;
+
+    function loadNow(opacity) {
+        if (opacity <= 0) {
+            displayContent();
+        } else {
+            loader.style.opacity = opacity;
+            window.setTimeout(function() {
+                loadNow(opacity - 0.05);
+            }, 50);
+        }
+    }
+
+    function displayContent() {
+        loader.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        loader = document.getElementById('loader');
+        loadNow(1);
+    });
+</script>
+
+
+
+
+</html>

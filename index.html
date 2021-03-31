@@ -1,0 +1,168 @@
+<html>
+
+<head>
+    <link rel="icon" href="star.png" type="image/gif" sizes="16x16">
+    <title>SSCA
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="content">
+        <nav class="navbar">
+            <div class="navbox">
+                <div class="logo">
+                    <a href="#"><img src="star.png" alt="">Star Sports Coaching Academy</a>
+                </div>
+
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="achievement.html">Achievements</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--home section ak-->
+        <section class="home" id="home">
+            <div class="navbox">
+                <div class="home-content">
+                    <div class="boom">
+                    </div>
+                    <div class="text-1">
+                        <h1>Welcome to SSCA
+                        </h1>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <br><br>
+        <!--sports work-->
+
+        <section class="sports" id="sports">
+            <div class="navbox">
+                <h2 class="title">Our Sports</h2>
+                <div class="z">
+                    <div class="card">
+                        <div class="box">
+                            <img src="cric.jpg" alt="">
+                            <div class="text">Cricket</div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="box">
+
+                            <a href="https://github.com/indeblue/AMS"> <img src="foot.jpg" alt="">
+                                <div class="text">Football</div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <a href="https://github.com/201851019-iiitv/Cyber-Management-System"> <img src="hoc.jpg" alt="">
+                                <div class="text">Hockey</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="base.jpg" alt="">
+                            <div class="text">Baseball</div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <br><br><br>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gallery</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Grounds</a></li>
+                        <li><a href="#">Eqips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Locations</h3>
+                    <ul>
+                        <li><a href="#">Ashok Nagar</a></li>
+                        <li><a href="#">Bhagat Nagar</a></li>
+                        <li>
+                            <a href="#">Chetan Vihar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Join us</h3>
+                    <ul>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Mentor</a></li>
+                        <li><a href="#">Coach</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section form">
+                    <h3>Drop a Message</h3>
+                    <p>We will reply you very soon!</p>
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Send Message</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; Akshay Soni
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script>
+    var loader;
+
+    function loadNow(opacity) {
+        if (opacity <= 0) {
+            displayContent();
+        } else {
+            loader.style.opacity = opacity;
+            window.setTimeout(function() {
+                loadNow(opacity - 0.05);
+            }, 50);
+        }
+    }
+
+    function displayContent() {
+        loader.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        loader = document.getElementById('loader');
+        loadNow(1);
+    });
+</script>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,185 @@
+<html>
+
+<head>
+    <link rel="icon" href="star.png" type="image/gif" sizes="16x16">
+    <title>SSCA
+    </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="loader"></div>
+    <div id="content">
+        <nav class="navbar">
+            <div class="navbox">
+                <div class="logo">
+                    <a href="#"><img src="star.png" alt="">Star Sports Coaching Academy</a>
+                </div>
+
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="achievement.html">Achievements</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--home section ak-->
+        <section class="home" id="home">
+            <div class="navbox">
+                <div class="home-content">
+                    <div class="boom">
+                    </div>
+                    <div class="text-1">
+                        <h1>Welcome to SSCA
+                        </h1>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <br><br>
+
+        <section class="achieve" id="achieve">
+            <div class="navbox">
+                <h2 class="title">Our Achievements</h2>
+                <div class="achieve-info">
+                    <div class="card">
+                        <div class="box"><img src="favicon.ico" style="width:7%">
+                            <div class="text">1st prize in Cricket Championship</div>
+                            <img src="cric.jpg" alt="" onclick='bigImgView(this.src)'>
+
+                        </div>
+                    </div>
+                    <br><br><br><br>
+                    <div class=" card ">
+                        <div class="box "><img src="favicon.ico" style="width:7%">
+                            <div class="text ">2nd in football Tournament</S>
+                            </div>
+                            <img src="ss.jpg" alt="" onclick='bigImgView(this.src)'>
+
+                        </div>
+                    </div>
+                    <br><br><br><br>
+                    <div class="card ">
+                        <div class="box "><img src="favicon.ico" style="width:7%">
+                            <div class="text ">Silver in Hockey</div>
+                            <img src="w.jpg" alt="" onclick='bigImgView(this.src)'>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                let bigImgView = (imgSrc) => {
+
+                    // Making elements
+                    let divP = document.createElement('DIV');
+                    let spanC = document.createElement('SPAN');
+                    let imgC = document.createElement("IMG");
+
+                    // Setting attributes
+                    divP.setAttribute('class', 'bib-modal');
+                    spanC.setAttribute('class', 'bib-close');
+                    imgC.setAttribute('class', 'bib-modal-content');
+                    imgC.setAttribute('src', imgSrc);
+
+                    // Adding texts
+                    spanC.innerHTML = '&times;';
+
+                    // Handling events
+                    spanC.onclick = function() {
+                        this.parentElement.remove();
+                    }
+
+                    // Appending childs
+                    divP.appendChild(spanC);
+                    divP.appendChild(imgC);
+
+                    // Appending to body
+                    document.body.appendChild(divP);
+                    divP.style.display = 'block';
+                    console.log("Big image");
+
+                }
+            </script>
+            <br><br><br>
+        </section>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gallery</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Grounds</a></li>
+                        <li><a href="#">Eqips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Locations</h3>
+                    <ul>
+                        <li><a href="#">Ashok Nagar</a></li>
+                        <li><a href="#">Bhagat Nagar</a></li>
+                        <li>
+                            <a href="#">Chetan Vihar</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Join us</h3>
+                    <ul>
+                        <li><a href="#">Student</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Mentor</a></li>
+                        <li><a href="#">Coach</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section form">
+                    <h3>Drop a Message</h3>
+                    <p>We will reply you very soon!</p>
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Send Message</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; Akshay Soni
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script>
+    var loader;
+
+    function loadNow(opacity) {
+        if (opacity <= 0) {
+            displayContent();
+        } else {
+            loader.style.opacity = opacity;
+            window.setTimeout(function() {
+                loadNow(opacity - 0.05);
+            }, 50);
+        }
+    }
+
+    function displayContent() {
+        loader.style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+        loader = document.getElementById('loader');
+        loadNow(1);
+    });
+</script>
+
+
+</html>
